@@ -1,10 +1,21 @@
+export async function askGemini(prompt: string) {
+  const response = await fetch("/api/gemini", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ prompt }),
+  });
 
-import { GoogleGenAI } from "@google/genai";
+  if (!response.ok) {
+    const txt = await response.text();
+    throw new Error(`Proxy error ${response.status}: ${txt}`);
+  }
+
+  return await response.json();
+}
+
 import type { Metrics, Politico, AnalysisHistoryEntry } from '../types';
-
-// Fix: Initialize GoogleGenAI directly with process.env.API_KEY as per guidelines.
-// The API key is assumed to be pre-configured and valid in the execution environment.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const PROMPT_TEMPLATE = `
 Você é uma IA especializada em análise técnica de comunicação pública, reputação institucional e gestão de risco social.
