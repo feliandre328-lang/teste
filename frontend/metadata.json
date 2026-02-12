@@ -1,0 +1,5 @@
+{
+  "name": "StratComm",
+  "description": "Uma ferramenta de IA para analisar comentários de redes sociais, identificar riscos de comunicação e sugerir respostas institucionais neutras. Ideal para equipes de comunicação e análise política.",
+  "requestFramePermissions": []
+}

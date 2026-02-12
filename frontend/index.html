@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StratComm AI - Análise de Comunicação</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='cyan'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M12%202a2.5%202.5%200%200%200-2.5%202.5v2.34a1%201%200%200%201-1%201h-2.54a2.5%202.5%200%200%200%200%205h2.54a1%201%200%200%201%201%201v2.34a2.5%202.5%200%201%200%205%200v-2.34a1%201%200%200%201%201-1h2.54a2.5%202.5%200%200%200%200-5h-2.54a1%201%200%200%201-1-1V4.5A2.5%202.5%200%200%200%2012%202Z'/%3E%3Cpath%20d='M12%2013a2.5%202.5%200%200%200%200%205%202.5%202.5%200%200%200%200-5Z'/%3E%3Cpath%20d='M19.5%207.5a2.5%202.5%200%200%201%200%205%202.5%202.5%200%200%201%200-5Z'/%3E%3Cpath%20d='M4.5%207.5a2.5%202.5%200%200%201%200%205%202.5%202.5%200%200%201%200-5Z'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        #report-output, #report-output * {
+          visibility: visible;
+        }
+        #report-output {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          padding: 2rem;
+          margin: 0;
+          border: none !important;
+          background-color: white !important;
+          color: black !important;
+        }
+        #report-output h1, #report-output h2, #report-output h3 {
+          color: #111827 !important;
+        }
+        #report-output p, #report-output span, #report-output li, #report-output div, #report-output strong {
+          color: #374151 !important;
+          background-color: transparent !important;
+        }
+        #report-output .prose {
+          color: #374151 !important;
+        }
+        #export-pdf-button {
+          display: none !important;
+        }
+         #report-output h3 {
+          border-top: 1px solid #d1d5db !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.4/client",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+  <!-- Google API Client -->
+  <script src="https://apis.google.com/js/api.js"></script>
+  <!-- Facebook SDK -->
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900 text-gray-100">
+    <div id="fb-root"></div>
+    <div id="root"></div>
+    
+    <!-- Scripts to transpile and run the React/TSX application -->
+    <script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+    <script type="text/babel" data-type="module" src="index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
